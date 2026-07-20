@@ -1,0 +1,621 @@
+<!-- if you see this i am your bf, and i lovee you soo much and soooooo muchhhh andrea santos -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Babyyyy — Happy Birthday, Andrea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Caveat:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum-deep:#241322;
+    --plum:#33203a;
+    --plum-soft:#4a2c4e;
+    --cream:#fbf1e6;
+    --cream-dim:#f1e2ce;
+    --rose:#e6a2b4;
+    --rose-deep:#c6607a;
+    --gold:#f0b860;
+    --gold-soft:#f6cd8b;
+    --ink:#2a1a2c;
+    --shadow: 0 20px 60px rgba(20,8,22,0.35);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Nunito', sans-serif;
+    background:var(--plum-deep);
+    color:var(--cream);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  a, button{font-family:inherit;}
+
+  /* ---------- ambient hearts ---------- */
+  #heart-field{
+    position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden;
+  }
+  .heart{
+    position:absolute;
+    bottom:-40px;
+    font-size:16px;
+    color:var(--rose);
+    opacity:0;
+    animation:float-up linear forwards;
+    filter:drop-shadow(0 0 6px rgba(230,162,180,0.35));
+  }
+  @keyframes float-up{
+    0%{ opacity:0; transform:translateY(0) translateX(0) rotate(0deg) scale(0.8);}
+    10%{ opacity:0.55;}
+    85%{ opacity:0.4;}
+    100%{ opacity:0; transform:translateY(-115vh) translateX(var(--drift,20px)) rotate(25deg) scale(1.1);}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:8vh 6vw 10vh;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(230,162,180,0.16), transparent 55%),
+      radial-gradient(ellipse at 75% 80%, rgba(240,184,96,0.10), transparent 50%),
+      linear-gradient(160deg, var(--plum-deep), var(--plum) 60%, var(--plum-soft));
+    z-index:2;
+  }
+
+  .eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    font-weight:700;
+    margin-bottom:1.6rem;
+    opacity:0;
+    animation:reveal 1s ease forwards 0.2s;
+  }
+
+  .hero-name{
+    font-family:'Caveat', cursive;
+    font-size:clamp(3.2rem, 11vw, 6.5rem);
+    color:var(--rose);
+    line-height:0.9;
+    opacity:0;
+    animation:reveal 1s ease forwards 0.45s;
+    transform-origin:left center;
+  }
+
+  .hero h1{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 7vw, 4.6rem);
+    line-height:1.08;
+    margin-top:0.4rem;
+    color:var(--cream);
+    opacity:0;
+    animation:reveal 1s ease forwards 0.7s;
+  }
+
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+  }
+
+  .hero p.sub{
+    max-width:34ch;
+    margin:1.8rem auto 0;
+    font-size:1.05rem;
+    line-height:1.6;
+    color:var(--cream-dim);
+    opacity:0;
+    animation:reveal 1s ease forwards 0.95s;
+  }
+
+  @keyframes reveal{
+    to{opacity:1;}
+    from{opacity:0; transform:translateY(14px);}
+  }
+  .eyebrow, .hero-name, .hero h1, .hero p.sub{transform:translateY(14px);}
+  .eyebrow{animation-name: reveal;}
+
+  .scroll-cue{
+    margin-top:3.5rem;
+    display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+    color:var(--cream-dim);
+    font-size:0.75rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    opacity:0;
+    animation:reveal 1s ease forwards 1.3s;
+  }
+  .scroll-cue span.arrow{
+    width:1px; height:34px; background:linear-gradient(var(--rose), transparent);
+    animation:pulse-line 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-line{ 0%,100%{opacity:0.3;} 50%{opacity:1;} }
+
+  /* ---------- LETTER ---------- */
+  .letter-section{
+    position:relative;
+    background:var(--cream);
+    color:var(--ink);
+    padding:11vh 6vw 12vh;
+    z-index:2;
+  }
+  .letter-wrap{
+    max-width:640px;
+    margin:0 auto;
+    position:relative;
+  }
+  .letter-mark{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:5rem;
+    color:var(--rose-deep);
+    line-height:1;
+    opacity:0.6;
+  }
+  .letter-wrap h2{
+    font-family:'Caveat', cursive;
+    font-size:2.6rem;
+    color:var(--rose-deep);
+    margin-bottom:1.2rem;
+  }
+  .letter-body p{
+    font-size:1.08rem;
+    line-height:1.85;
+    color:#4a3a4a;
+    margin-bottom:1.3rem;
+  }
+  .letter-body p:first-of-type::first-letter{
+    font-family:'Playfair Display', serif;
+    font-size:3.2rem;
+    float:left;
+    line-height:0.8;
+    padding-right:0.12em;
+    padding-top:0.05em;
+    color:var(--rose-deep);
+    font-weight:700;
+  }
+  .letter-sign{
+    font-family:'Caveat', cursive;
+    font-size:1.9rem;
+    color:var(--rose-deep);
+    margin-top:1.6rem;
+    text-align:right;
+  }
+
+  /* ---------- REASONS ---------- */
+  .reasons-section{
+    position:relative;
+    background:linear-gradient(180deg, var(--plum-soft), var(--plum));
+    padding:11vh 6vw 12vh;
+    z-index:2;
+    overflow:hidden;
+  }
+  .reasons-head{
+    text-align:center;
+    max-width:520px;
+    margin:0 auto 4rem;
+  }
+  .reasons-head .eyebrow{ animation:none; opacity:1; transform:none; margin-bottom:1rem;}
+  .reasons-head h2{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(1.9rem, 4vw, 2.6rem);
+    color:var(--cream);
+  }
+  .reasons-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:1.4rem;
+    max-width:1000px;
+    margin:0 auto;
+  }
+  .reason-card{
+    background:rgba(251,241,230,0.05);
+    border:1px solid rgba(230,162,180,0.22);
+    border-radius:14px;
+    padding:1.8rem 1.6rem;
+    backdrop-filter:blur(2px);
+    transition:transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    opacity:0;
+    transform:translateY(20px);
+  }
+  .reason-card.in-view{
+    animation:card-in 0.7s ease forwards;
+  }
+  @keyframes card-in{ to{opacity:1; transform:translateY(0);} }
+  .reason-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--rose);
+    background:rgba(251,241,230,0.09);
+  }
+  .reason-card .tag{
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--gold-soft);
+    display:block;
+    margin-bottom:0.6rem;
+  }
+  .reason-card p{
+    font-size:0.98rem;
+    line-height:1.6;
+    color:var(--cream-dim);
+  }
+
+  /* ---------- CAKE ---------- */
+  .cake-section{
+    position:relative;
+    background:var(--cream);
+    color:var(--ink);
+    padding:11vh 6vw 14vh;
+    text-align:center;
+    z-index:2;
+    overflow:hidden;
+  }
+  .cake-head .eyebrow{ color:var(--rose-deep); animation:none; opacity:1; transform:none; }
+  .cake-head h2{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(2rem, 5vw, 3rem);
+    margin:0.6rem 0 0.6rem;
+    color:var(--ink);
+  }
+  .cake-head p{
+    color:#6c5a6c;
+    max-width:36ch;
+    margin:0 auto 3.5rem;
+    font-size:1rem;
+  }
+
+  .cake-stage{
+    position:relative;
+    width:min(92vw, 420px);
+    margin:0 auto;
+  }
+
+  .candles{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    gap:34px;
+    height:90px;
+    margin-bottom:-6px;
+    z-index:3;
+  }
+  .candle{
+    position:relative;
+    width:10px;
+    height:52px;
+    background:linear-gradient(180deg, var(--gold-soft), var(--gold));
+    border-radius:3px;
+    cursor:pointer;
+    align-self:flex-end;
+    box-shadow:inset 0 0 4px rgba(255,255,255,0.4);
+    transition:transform 0.15s ease;
+  }
+  .candle:hover{ transform:translateY(-2px); }
+  .candle:active{ transform:translateY(0); }
+  .candle::before{ /* wick */
+    content:'';
+    position:absolute; top:-6px; left:50%; transform:translateX(-50%);
+    width:2px; height:8px; background:#4a3a2c; border-radius:1px;
+  }
+  .flame{
+    position:absolute;
+    top:-26px; left:50%;
+    transform:translateX(-50%);
+    width:14px; height:22px;
+    background:radial-gradient(circle at 50% 70%, #fff6d0 0%, var(--gold) 45%, var(--rose-deep) 100%);
+    border-radius:50% 50% 50% 50% / 65% 65% 35% 35%;
+    animation:flicker 0.9s ease-in-out infinite alternate;
+    transform-origin:bottom center;
+  }
+  @keyframes flicker{
+    0%{ transform:translateX(-50%) rotate(-3deg) scale(1); }
+    50%{ transform:translateX(-50%) rotate(2deg) scale(1.06); }
+    100%{ transform:translateX(-50%) rotate(-2deg) scale(0.97); }
+  }
+  .candle.out .flame{ display:none; }
+  .smoke{
+    position:absolute;
+    top:-26px; left:50%;
+    width:6px; height:6px;
+    background:rgba(120,110,120,0.5);
+    border-radius:50%;
+    opacity:0;
+    pointer-events:none;
+  }
+  .candle.out .smoke{
+    animation:smoke-rise 1.1s ease-out forwards;
+  }
+  @keyframes smoke-rise{
+    0%{ opacity:0.6; transform:translate(-50%, 0) scale(1); }
+    100%{ opacity:0; transform:translate(-30%, -46px) scale(2.4); }
+  }
+
+  .cake-body{
+    position:relative;
+    z-index:2;
+  }
+  .cake-body svg{ width:100%; display:block; filter:drop-shadow(0 18px 26px rgba(198,96,122,0.22)); }
+
+  .cake-hint{
+    margin-top:1.6rem;
+    font-size:0.85rem;
+    letter-spacing:0.05em;
+    color:var(--rose-deep);
+    opacity:0.85;
+  }
+
+  .wish-reveal{
+    max-width:480px;
+    margin:3rem auto 0;
+    padding:2.2rem 2rem;
+    background:linear-gradient(160deg, #fff, var(--cream-dim));
+    border:1px solid rgba(198,96,122,0.25);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    opacity:0;
+    transform:translateY(16px) scale(0.98);
+    pointer-events:none;
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .wish-reveal.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .wish-reveal .tag{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--rose-deep);
+    display:block;
+    margin-bottom:0.6rem;
+  }
+  .wish-reveal p{
+    font-size:1.05rem;
+    line-height:1.7;
+    color:#4a3a4a;
+  }
+
+  #confetti-layer{
+    position:fixed; inset:0; pointer-events:none; z-index:50; overflow:hidden;
+  }
+  .confetti-piece{
+    position:absolute;
+    top:-20px;
+    width:8px; height:14px;
+    opacity:0.9;
+    animation:confetti-fall linear forwards;
+  }
+  @keyframes confetti-fall{
+    to{ transform:translateY(105vh) rotate(540deg); opacity:0.2; }
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    position:relative;
+    background:linear-gradient(180deg, var(--plum), var(--plum-deep));
+    color:var(--cream-dim);
+    text-align:center;
+    padding:9vh 6vw 7vh;
+    z-index:2;
+  }
+  footer .foot-line{
+    font-family:'Caveat', cursive;
+    font-size:2.1rem;
+    color:var(--rose);
+    margin-bottom:0.6rem;
+  }
+  footer .foot-small{
+    font-size:0.8rem;
+    letter-spacing:0.08em;
+    color:rgba(251,241,230,0.5);
+  }
+
+  :focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<div id="heart-field" aria-hidden="true"></div>
+<div id="confetti-layer" aria-hidden="true"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">a little something for</p>
+  <div class="hero-name">my babyyyy</div>
+  <h1>Happy Birthday,<br><em>Andrea</em></h1>
+  <p class="sub">Of everyone in this whole loud world, you're still my favorite person to text for no reason. Today's about you. Scroll slow.</p>
+  <div class="scroll-cue"><span>keep going</span><span class="arrow"></span></div>
+</section>
+
+<!-- LETTER -->
+<section class="letter-section">
+  <div class="letter-wrap">
+    <div class="letter-mark">"</div>
+    <h2>Dear Andrea,</h2>
+    <div class="letter-body">
+      <p>I wanted to make you something new i was trying to make you a roblox game only for you my babyyy, but the laptop has other words and roblox studio was sooo slow so i made you this and even if this "something" is a webpage that only you will ever see. Consider it my very over-engineered birthday card. (i used alot of algorithms here)</p>
+      <p>You make ordinary days feel like they're worth remembering. even if we fight sometimes and we don't get along, you still the one on my heart the one that i love soo much that i love everything about you, The way you laugh at your own jokes before you even finish telling them. The way you say "babiii", every single time. I could write a hundred of these letters and still feel like I left something out.</p>
+      <p>So here's the short version: I'm so glad you were born. Selfishly, mostly, because it means I get to know you.</p>
+    </div>
+    <p class="letter-sign">— yours, always</p>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="reasons-section">
+  <div class="reasons-head">
+    <p class="eyebrow">an incomplete list</p>
+    <h2>Things I love about you</h2>
+  </div>
+  <div class="reasons-grid" id="reasons-grid">
+    <div class="reason-card"><span class="tag">the laugh</span><p>The one that starts small and then completely takes over your whole face. I live for that one.</p></div>
+    <div class="reason-card"><span class="tag">the cheering</span><p>Trying to make it up for me and be nice to me and lovee me back.</p></div>
+    <div class="reason-card"><span class="tag">the softness</span><p>How gentle you are with people who don't deserve it, and how fierce you are with the people you love.</p></div>
+    <div class="reason-card"><span class="tag">the chaos</span><p>Your what ifs and crazy dreams, and when you asked alot of questionson</p></div>
+    <div class="reason-card"><span class="tag">the "babiii"</span><p>Three i's. Always three. It's my favorite word in any language, and even when you said 3 means i love you (love in every details).</p></div>
+    <div class="reason-card"><span class="tag">the everything</span><p>Honestly? Just you. Being exactly you. That's the whole reason.</p></div>
+  </div>
+</section>
+
+<!-- CAKE -->
+<section class="cake-section">
+  <div class="cake-head">
+    <p class="eyebrow">make a wish</p>
+    <h2>Blow out your candles</h2>
+    <p>Tap each little flame. and make a wish my babyyy.</p>
+  </div>
+
+  <div class="cake-stage">
+    <div class="candles" id="candles">
+      <div class="candle" data-candle><div class="flame"></div><div class="smoke"></div></div>
+      <div class="candle" data-candle><div class="flame"></div><div class="smoke"></div></div>
+      <div class="candle" data-candle><div class="flame"></div><div class="smoke"></div></div>
+      <div class="candle" data-candle><div class="flame"></div><div class="smoke"></div></div>
+      <div class="candle" data-candle><div class="flame"></div><div class="smoke"></div></div>
+    </div>
+    <div class="cake-body">
+      <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- top tier -->
+        <rect x="90" y="60" width="240" height="60" rx="10" fill="#f7d7de"/>
+        <path d="M90 70 Q 105 55, 120 70 T 150 70 T 180 70 T 210 70 T 240 70 T 270 70 T 300 70 T 330 70 L 330 80 L 90 80 Z" fill="#fff"/>
+        <rect x="90" y="60" width="240" height="12" rx="6" fill="#fbeef1"/>
+        <!-- bottom tier -->
+        <rect x="45" y="120" width="330" height="80" rx="12" fill="#e6a2b4"/>
+        <path d="M45 132 Q 63 114, 81 132 T 117 132 T 153 132 T 189 132 T 225 132 T 261 132 T 297 132 T 333 132 T 369 132 L 369 145 L 45 145 Z" fill="#fbeef1"/>
+        <rect x="45" y="118" width="330" height="14" rx="7" fill="#f2b9c6"/>
+        <!-- drips -->
+        <circle cx="140" cy="122" r="7" fill="#fbeef1"/>
+        <circle cx="205" cy="124" r="6" fill="#fbeef1"/>
+        <circle cx="270" cy="121" r="8" fill="#fbeef1"/>
+        <!-- plate -->
+        <ellipse cx="210" cy="204" rx="190" ry="12" fill="#c6607a" opacity="0.25"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="cake-hint" id="cake-hint">5 candles left to go</p>
+
+  <div class="wish-reveal" id="wish-reveal">
+    <span class="tag">wish granted</span>
+    <p>Happy birthday, my babyyyy. I love you more than this page has room to say.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="foot-line">happy birthday, baby.</p>
+  <p class="foot-small">made with way too much love — click the candles if you skipped them</p>
+</footer>
+
+<script>
+  // ---------- ambient floating hearts ----------
+  const heartField = document.getElementById('heart-field');
+  const heartSymbols = ['♥','❥','♡'];
+  function spawnHeart(){
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.textContent = heartSymbols[Math.floor(Math.random()*heartSymbols.length)];
+    const left = Math.random()*100;
+    const size = 12 + Math.random()*16;
+    const duration = 9 + Math.random()*7;
+    const drift = (Math.random()*80 - 40) + 'px';
+    h.style.left = left + 'vw';
+    h.style.fontSize = size + 'px';
+    h.style.setProperty('--drift', drift);
+    h.style.animationDuration = duration + 's';
+    heartField.appendChild(h);
+    setTimeout(()=> h.remove(), duration*1000 + 500);
+  }
+  for(let i=0;i<6;i++) setTimeout(spawnHeart, i*900);
+  setInterval(spawnHeart, 1500);
+
+  // ---------- reveal reason cards on scroll ----------
+  const cards = document.querySelectorAll('.reason-card');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in-view');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.2});
+  cards.forEach((c,i)=>{ c.style.animationDelay = (i*0.08)+'s'; io.observe(c); });
+
+  // ---------- candles ----------
+  const candles = document.querySelectorAll('[data-candle]');
+  const hint = document.getElementById('cake-hint');
+  const wishReveal = document.getElementById('wish-reveal');
+  let remaining = candles.length;
+
+  function updateHint(){
+    if(remaining === 0){
+      hint.textContent = 'all wished up ✨';
+    } else if (remaining === 1){
+      hint.textContent = '1 candle left to go';
+    } else {
+      hint.textContent = remaining + ' candles left to go';
+    }
+  }
+  updateHint();
+
+  candles.forEach(candle=>{
+    candle.addEventListener('click', ()=>{
+      if(candle.classList.contains('out')) return;
+      candle.classList.add('out');
+      remaining--;
+      updateHint();
+      if(remaining === 0){
+        setTimeout(()=>{
+          wishReveal.classList.add('show');
+          burstConfetti();
+        }, 400);
+      }
+    });
+    candle.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); candle.click(); }
+    });
+    candle.setAttribute('tabindex','0');
+    candle.setAttribute('role','button');
+    candle.setAttribute('aria-label','Blow out candle');
+  });
+
+  // ---------- confetti burst ----------
+  const confettiLayer = document.getElementById('confetti-layer');
+  const confettiColors = ['#e6a2b4','#f0b860','#c6607a','#fbf1e6','#f6cd8b'];
+  function burstConfetti(){
+    for(let i=0;i<60;i++){
+      const p = document.createElement('div');
+      p.className = 'confetti-piece';
+      p.style.left = Math.random()*100 + 'vw';
+      p.style.background = confettiColors[Math.floor(Math.random()*confettiColors.length)];
+      p.style.animationDuration = (2 + Math.random()*1.6) + 's';
+      p.style.animationDelay = (Math.random()*0.4) + 's';
+      p.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      confettiLayer.appendChild(p);
+      setTimeout(()=> p.remove(), 4200);
+    }
+  }
+</script>
+
+</body>
+</html>
